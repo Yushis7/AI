@@ -1,0 +1,17 @@
+import openpyxl
+
+#새로운 엑셀 파일 생성
+wb= openpyxl.Workbook()
+
+#새로운 시트 생성 시트 이름 바꾸기
+ws = wb.create_sheet('2030.05')
+
+#모든 시트 이름 출력
+print(wb.sheetnames)
+
+#시트 삭제
+del wb['Sheet']
+
+#엑셀 저장 엑셀 자동으로 만들기
+wb.save('03.엑셀자동화/거래처A매입현황.xlsx')
+
